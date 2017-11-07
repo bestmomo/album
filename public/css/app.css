@@ -28,10 +28,6 @@ body {
     content: "Parcourir";
 }
 
-.custom-file-control::after {
-    content: "Choisir un fichier...";
-}
-
 .dropdown-menu {
     min-width: 5rem;
 }
