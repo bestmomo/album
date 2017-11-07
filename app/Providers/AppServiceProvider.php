@@ -26,7 +26,9 @@ class AppServiceProvider extends ServiceProvider
 
         AbstractPaginator::defaultView("pagination::bootstrap-4");
 
-        view()->share('categories', Category::all());
+       if(request()->server("SCRIPT_NAME") !== 'artisan') {
+            view ()->share ('categories', Category::all ());
+        }
     }
 
     /**
