@@ -6,11 +6,6 @@ use App\Models\User;
 class UsersTableSeeder extends Seeder
 {
 
-    /**
-     * Auto generated seed file
-     *
-     * @return void
-     */
     public function run()
     {
         User::create([
