@@ -7,7 +7,7 @@ use Illuminate\ {
     Database\Eloquent\Model
 };
 
-class ImageSaving
+class CategorySaving
 {
     use SerializesModels;
 

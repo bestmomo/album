@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Image;
-use App\Events\ImageSaving;
+use App\Events\CategorySaving;
 
 class Category extends Model
 {
@@ -23,7 +23,7 @@ class Category extends Model
      * @var array
      */
     protected $dispatchesEvents = [
-        'saving' => ImageSaving::class,
+        'saving' => CategorySaving::class,
     ];
 
     /**

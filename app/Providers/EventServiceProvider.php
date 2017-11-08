@@ -12,8 +12,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\ImageSaving' => [
-            'App\Listeners\ImageSaving',
+        'App\Events\CategorySaving' => [
+            'App\Listeners\CategorySaving',
         ],
     ];
 
