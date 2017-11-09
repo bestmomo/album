@@ -8,15 +8,6 @@ use App\Models\ { User, Category };
 class Image extends Model
 {
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'title', 'category_id', 'user_id', 'description', 'name'
-    ];
-
-    /**
      * Get the category that owns the image.
      */
     public function category()
