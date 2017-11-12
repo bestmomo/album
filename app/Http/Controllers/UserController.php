@@ -29,6 +29,8 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        $this->authorize('update', $user);
+
         $request->validate([
             'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
             'pagination' => 'required',
@@ -39,6 +41,6 @@ class UserController extends Controller
             'settings' => json_encode(['pagination' => $request->pagination]),
         ]);
 
-        return back()->with(['ok' => __('Le profil a bien été mis à jour')]);
+        return back()->with('ok', __('Le profil a bien été mis à jour'));
     }
 }
