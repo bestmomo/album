@@ -37,6 +37,7 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\Locale::class,
             \App\Http\Middleware\Settings::class,
+            \App\Http\Middleware\ViewsShare::class,
         ],
 
         'api' => [
