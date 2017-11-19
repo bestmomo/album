@@ -13,12 +13,14 @@ class UsersTableSeeder extends Seeder
             'email' => 'durand@chezlui.fr',
             'role' => 'admin',
             'password' => bcrypt('admin'),
+            'settings' => '{"pagination": 8}',
         ]);
 
         User::create([
             'name' => 'Dupont',
             'email' => 'dupont@chezlui.fr',
             'password' => bcrypt('user'),
+            'settings' => '{"pagination": 8}',
         ]);
     }
 }

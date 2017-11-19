@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->enum('role', ['user', 'admin'])->default('user');
-            $table->longtext('settings')->default('{"pagination": 8}');
+            $table->json('settings');
             $table->rememberToken();
             $table->timestamps();
         });
