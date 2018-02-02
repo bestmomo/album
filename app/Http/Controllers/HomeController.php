@@ -1,13 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Image;
 
 class HomeController extends Controller
 {
     /**
-     * Show the home page.
+     * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
      */
@@ -18,8 +17,9 @@ class HomeController extends Controller
         return view('home', compact('images'));
     }
 
-/**
-     * Show the home page.
+
+    /**
+     * Change locale.
      *
      * @param  string  $locale
      * @return \Illuminate\Http\Response
@@ -31,5 +31,5 @@ class HomeController extends Controller
         session(['locale' => $locale]);
 
         return back();
-    }    
+    } 
 }

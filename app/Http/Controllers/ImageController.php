@@ -50,21 +50,6 @@ class ImageController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Image  $image
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Image $image)
-    {
-        $this->authorize('delete', $image);
-
-        $image->delete();
-
-        return back();
-    }
-
-    /**
      * Display a listing of the images for the specified category.
      *
      * @param  string  $slug
@@ -90,5 +75,20 @@ class ImageController extends Controller
         $images = $this->repository->getImagesForUser($user->id);
 
         return view('home', compact('user', 'images'));
-    }   
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Image  $image
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Image $image)
+    {
+        $this->authorize('delete', $image);
+
+        $image->delete();
+
+        return back();
+    }
 }

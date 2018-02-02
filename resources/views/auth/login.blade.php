@@ -25,12 +25,11 @@
                 'required' => true,
                 ])    
 
-            <div class="form-check">
-                <label class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" name="remember" {{ old('remember') ? 'checked' : '' }}> 
-                    <span class="custom-control-indicator"></span>
-                    <span class="custom-control-description"> @lang('Se rappeler de moi')</span>
-                </label>
+            <div class"form-group">
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="remember" name="remember" {{ old('remember') ? 'checked' : '' }}> 
+                <label class="custom-control-label" for="remember"> @lang('Se rappeler de moi')</label>
+            </div>
             </div>
 
             @component('components.button')

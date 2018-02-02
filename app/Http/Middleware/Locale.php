@@ -19,9 +19,18 @@ class Locale
             session(['locale' => $request->getPreferredLanguage(config('app.locales'))]);
         }
 
-        app()->setLocale(session('locale'));
+        $locale = session('locale');
 
-        setlocale(LC_TIME, session('locale'));
+        app()->setLocale($locale);
+
+/*        $conversion = [
+          'fr' => 'fr_FR',
+          'en' => 'en_US',
+        ];
+
+        $locale = $conversion[$locale];*/
+
+        setlocale(LC_TIME, $locale);
 
         return $next($request);
     }

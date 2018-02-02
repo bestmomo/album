@@ -30,7 +30,7 @@ class ImageRepository
         $image->name = $path;
         $image->user_id = auth()->id();
         $image->save();
-    }
+    } 
 
     /**
      * Get images for category.

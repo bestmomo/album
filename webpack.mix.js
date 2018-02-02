@@ -11,17 +11,15 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.styles([
-    'resources/assets/css/bootstrap.min.css',
-    'resources/assets/css/font-awesome.min.css',
-    'resources/assets/css/app.css',
+mix.styles([ 
+    'resources/assets/css/bootstrap.css',
+    'resources/assets/css/sweetalert2.css',
     'resources/assets/css/magnific-popup.css',
-    'resources/assets/css/sweetalert2.min.css',
-], 'public/css/app.css')
-.scripts([
-    'resources/assets/js/jquery-3.2.1.min.js',
-    'resources/assets/js/popper.min.js',
-    'resources/assets/js/bootstrap.min.js',
-    'resources/assets/js/jquery.magnific-popup.min.js',
-    'resources/assets/js/sweetalert2.all.min.js',
+    'resources/assets/css/app.css',
+], 'public/css/app.css') 
+.scripts([ 
+    'resources/assets/js/jquery-3.3.1.js', 
+    'resources/assets/js/bootstrap.bundle.js',
+    'resources/assets/js/sweetalert2.js',
+    'resources/assets/js/jquery.magnific-popup.js', 
 ], 'public/js/app.js');

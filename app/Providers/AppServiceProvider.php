@@ -24,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
             return auth()->check() && (auth()->id() === $id || auth()->user()->role === 'admin');
         });
 
+        if(request()->server("SCRIPT_NAME") !== 'artisan') {
+            view ()->share ('categories', Category::all ());
+        }
+
         AbstractPaginator::defaultView("pagination::bootstrap-4");
     }
 

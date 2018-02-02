@@ -11,16 +11,16 @@
         <form method="POST" action="{{ route('image.store') }}" enctype="multipart/form-data">
             {{ csrf_field() }}
 
-            <div class="form-group{{ $errors->has('image') ? ' is-invalid' : '' }}">
-                <label class="custom-file">
-                    <input type="file" id="image" name="image" class="form-control{{ $errors->has('image') ? ' is-invalid ' : '' }}custom-file-input" required>
-                    <span class="custom-file-control form-control-file"></span>
+            <div class="form-group{{ $errors->has('image') ? ' is-invalid' : '' }}">        
+                <div class="custom-file">
+                    <input type="file" id="image" name="image" class="{{ $errors->has('image') ? ' is-invalid ' : '' }}custom-file-input" required>
+                    <label class="custom-file-label" for="image"></label>
                     @if ($errors->has('image'))
                         <div class="invalid-feedback">
                             {{ $errors->first('image') }}
                         </div>
                     @endif
-                </label>
+                </div>
             </div>
 
             <div class="form-group">

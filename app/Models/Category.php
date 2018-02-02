@@ -16,7 +16,7 @@ class Category extends Model
     protected $fillable = [
         'name', 'slug',
     ];
-
+    
     /**
      * The event map for the model.
      *
